@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+<body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+    <div class="container">
+        <div class="form-box">
+            <h1>Login Here</h1>
+            <form method="post">
+                <class class="input-group">
+                
+                    {% csrf_token %} 
+                    <class class="input-field">
+                        <label for="username">Username</label>
+                        <input type="text" placeholder="Enter Username" id="username" name="username"><br>
+                    </class>
+                    <class class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Password" id="password" name="pass"><br>
+                    </class>
+                    
+                    <button class=" login" type="submit">Log In</button><br>
+                    
+                    <a class="text" href="{% url 'signup' %}" >Create a account</a>
+                </class>
+            </form>
+        </div>    
+    </div>
+
+</body>
+</html>

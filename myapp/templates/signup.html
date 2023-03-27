@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <style>
     body{
     margin: 0;
@@ -90,6 +92,7 @@ input[type="button"]{
   
 </head>
 <body>
+    
     <div class="container">
         <h1>Sign Up</h1>
         <div class="formbox">
@@ -122,6 +125,7 @@ input[type="button"]{
                     
                     <input class="sign" type="submit" value="Sign Up">
                     <a href="login/">I already have a account</a>
+                    
            
                 </div>
             </form>   

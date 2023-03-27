@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 
+
+
 # Create your views here.
 @login_required(login_url='login')
 def HomePage(request):
@@ -26,6 +28,8 @@ def SignupPage(request):
         mail=request.POST.get('email')
         pass1=request.POST.get('password1')
         pass2=request.POST.get('password2')
+        
+       
        
 
         if pass1!=pass2:
@@ -33,6 +37,8 @@ def SignupPage(request):
         else:
 
             my_user=User.objects.create_user(uname,mail,pass1)
+            
+            
             my_user.save()
             return redirect('login')
         
