@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-color:rgb(206, 206, 231);
+        background-position: center;
+        position: relative;
+    }
+
+    .form-box{
+        width: 90%;
+        height: 300px;
+        max-width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #fff;
+        padding: 50px 60px 70px;
+        text-align: center;
+    }
+
+    .form-box h1{
+        font-size: 40px;
+        margin-bottom: 60px;
+        color: #3c00a0;
+        position: relative;
+    }
+
+    .input-group{
+        font-size: 15px;
+    }
+
+    .input-field{
+        background: #eaeaea;
+        margin: 15px 0;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    input{
+        width: 100%;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 18px 15px;
+    }
+    .login{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button{
+        flex-basis: 48%;
+        background: #3c00a0;
+        color: #fff;
+        height: 40px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        transition: background 1s;
+    }
+    
+    .text{
+        font-size: 17px;
+    }
+
+    
+</style>  
+</head>
+<body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+    <div class="container">
+        <div class="form-box">
+            <h1>Login Here</h1>
+            <form method="post">
+                <class class="input-group">
+                
+                    {% csrf_token %} 
+                    <class class="input-field">
+                        <label for="username">Username</label>
+                        <input type="text" placeholder="Enter Username" id="username" name="username"><br>
+                    </class>
+                    <class class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Password" id="password" name="pass"><br>
+                    </class>
+                    
+                    <button class=" login" type="submit">Log In</button><br>
+                    
+                    <a class="text" href="{% url 'signup' %}" >Create a account</a>
+                </class>
+            </form>
+        </div>    
+    </div>
+
+</body>
+</html>
